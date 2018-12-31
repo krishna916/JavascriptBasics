@@ -102,9 +102,25 @@ console.log(html);
 
 //mapping an array of object
 const items = filteredArray.map( n => {
-    const obj = { value: n};
-    return  obj;
+    return { value: n};
+    
 });
 
 
 console.log(items);
+
+//reducing an array
+const array = [1, 2, 3, 4];
+
+let sum = 0;
+
+for(let n of array){
+    sum = sum + n;
+}
+ 
+console.log(sum);
+//reduce function is used to reduce the array to single element according to logic
+let reduceSum = array.reduce((accumalator, currentValue) => {
+    return accumalator + currentValue;
+}, 0);
+console.log(reduceSum);
